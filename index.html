@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <title>CRUD system</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="w-75 mx-auto py-4">
+
+        <h2 class="py-3 fw-bold">Product Managment System</h2>
+
+        <label for="productNameInput">Product Name:</label>
+        <input oninput="validationProductName()" type="text" class="form-control mt-1 mb-2" id="productNameInput"
+            placeholder="e.g. Iphone">
+
+        <label for="productPriceInput">Product Price:</label>
+        <input type="number" class="form-control mt-1 mb-2" id="productPriceInput" placeholder="e.g. 5000">
+
+        <label for="productCategoryInput">Product Category:</label>
+        <input type="text" class="form-control mt-1 mb-2" id="productCategoryInput" placeholder="e.g. smart watch">
+
+        <label for="productDescInput">Product Description:</label>
+        <textarea type="text" class="form-control mt-1 mb-2" id="productDescInput" placeholder="e.g. good"></textarea>
+
+        <button onclick="addProduct();" class="btn btn-info mt-2"> Add Product </button>
+        <button onclick="clearForm();" class="btn btn-info mt-2"> Reset </button>
+
+    </div>
+
+    <div class="w-75 m-auto p-3">
+        <label for="search">Search: </label>
+        <input onkeyup="searchProducts(this.value)" type="text" placeholder="search by product name"
+            class="form-control" id="search">
+
+    </div>
+
+    <table class="table w-75 mx-auto">
+        <thead>
+            <th>Index</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </thead>
+
+        <tbody id="tableBody"></tbody>
+    </table>
+
+
+    <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
